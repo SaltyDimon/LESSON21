@@ -1,36 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas&DOM</title>
+    <title>Канвас і DOM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Drawing Program</h1>
-    <canvas id="imgCanvas" width="400" height="500" onclick="draw(event)"></canvas>
+    <h1>Програма малювання</h1>
+    <canvas id="imgCanvas" width="400" height="500" onclick="draw(event)" onmousemove="draw(event)"></canvas>
 
-
-    <!-- <script src="script.js"></script> -->
-    <script>
-        function draw(event) {
-            let canvas = document.getElementById("imgCanvas");
-            let ctx = canvas.getContext("2d");
-            let rect = canvas.getBoundingClientRect();
-
-            let posX = event.clientX - rect.left;
-            let posY = event.clientY - rect.top;
-
-            ctx.fillStyle = "#00ff00"
-
-            ctx.beginPath();
-
-            ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
-
-            ctx.fill()
-
-
-    }
-    </script>
+    <!-- Ссылка на внешний файл JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
