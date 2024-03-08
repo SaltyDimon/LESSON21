@@ -69,7 +69,7 @@ function addFigure(event) {
 
 // Добавляем обработчик кликов для добавления фигур
 let canvas = document.getElementById("imgCanvas");
+canvas.addEventListener("mousedown", addFigure);
 canvas.addEventListener("click", addFigure);
-canvas.addEventListener("mousemove", addFigure);
 // Запускаем анимацию
 requestAnimationFrame(draw);
